@@ -59,7 +59,7 @@ header p { margin: 0px; }
 #grid div.b2048 { background-color: #333; box-shadow: 0px 0px 15px #555 inset, 0px 3px 0px #CCC; color: white; font-size: 40px; }
 
 nav { margin: 40px 0px 20px; }
-nav a { font-size: 25px; margin: 0px 5px; padding: 2px 8px; }
+nav a { font-size: 25px; margin: 0px 10px; padding: 2px 8px; }
 
 footer { font-size: 12px; color: #777; }
 footer a { color: #26F; text-decoration: none; }

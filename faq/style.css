@@ -1,0 +1,35 @@
+html {
+	font-family: "Open Sans", sans-serif; 
+	color: #444; background-color: #EEE; }
+body { width: 600px; margin: 30px auto 80px; }
+
+h1, a {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+a { color: #26F; text-decoration: none; }
+a:hover { color: #38F; text-decoration: underline; }
+
+header { position: relative; height: 100px; }
+
+h1 { 
+	position: absolute; top: 0px; left: 30px; 
+	display: inline-block; width: 190px;
+	font-size: 80px; line-height: 100px; margin: 0px; 
+	cursor: default; font-family: "Comfortaa"; font-size: 50px; }
+
+header a { 
+	position: absolute; top: 30px; right: 0px; 
+	display: inline-block; padding: 2px 8px; margin: 0px 10px;
+	background-color: white; border-radius: 3px; color: #444; font-size: 25px;
+	text-decoration: none; box-shadow: 0px 3px 0px #CCC; cursor: pointer; }
+header a:hover { color: #444; text-decoration: none; }
+header a:active { 
+	box-shadow: 0px 0px 0px #CCC; top: 33px; }
+
+div p:first-child { font-weight: bold; font-size: 20px; }
