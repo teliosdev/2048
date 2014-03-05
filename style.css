@@ -1,0 +1,66 @@
+html {
+	text-align: center; font-family: "Open Sans", sans-serif; 
+	color: #444; background-color: #EEE; }
+body { width: 500px; margin: 0px auto; }
+
+h1, #score, #grid { font-family: "Comfortaa"; }
+
+header, footer {
+	cursor: default;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+
+header a, nav a { 
+	display: inline-block; padding: 2px 4px; font-size: 12px;
+	background-color: white; border-radius: 3px; color: #444;
+	text-decoration: none; box-shadow: 0px 3px 0px #CCC; cursor: pointer; }
+header a:active, nav a:active { 
+	box-shadow: 0px 0px 0px #CCC; position: relative; top: 3px; }
+
+header { position: relative; height: 100px; margin-top: 50px; }
+h1 {
+	position: absolute; top: 0px; left: 30px; 
+	display: inline-block; width: 190px;
+	font-size: 80px; line-height: 100px; margin: 0px; }
+header div {
+	position: absolute; top: 0px; right: 0px; 
+	display: inline-block; width: 250px; }
+header p { margin: 0px; }
+#score { font-size: 40px; line-height: 70px; height: 65px; }
+
+#grid { 
+	width: 480px; height: 480px; 
+	padding: 10px; margin: 10px 0px;
+	background-color: #DDD;	border-radius: 8px;
+	box-shadow: 0px 3px 0px #BBB inset; }
+#grid div { 
+	display: inline-block; width: 110px; height: 110px; 
+	margin: 5px; border-radius: 5px; float: left;
+	line-height: 110px; font-size: 60px;
+	box-shadow: 0px 3px 0px #CCC; background-color: white; }
+
+#grid div.bv { background-color: white; box-shadow: 0px 0px 15px #DDD inset, 0px 3px 0px #CCC; }
+#grid div.b2 { background-color: #EAF4F9; box-shadow: 0px 0px 15px #CAE9F7 inset, 0px 3px 0px #CCC; }
+#grid div.b4 { background-color: #E0F5FF; box-shadow: 0px 0px 15px #C1EBFF inset, 0px 3px 0px #CCC; }
+#grid div.b8 { background-color: #C9EDFF; box-shadow: 0px 0px 15px #96DDFF inset, 0px 3px 0px #CCC; }
+#grid div.b16 { background-color: #CCF3F3; box-shadow: 0px 0px 15px #93F2F2 inset, 0px 3px 0px #CCC; }
+#grid div.b32 { background-color: #D5EEBC; box-shadow: 0px 0px 15px #C0ED93 inset, 0px 3px 0px #CCC; }
+#grid div.b64 { background-color: #E8DBFF; box-shadow: 0px 0px 15px #CDB2FF inset, 0px 3px 0px #CCC; }
+#grid div.b128 { background-color: #FBCDDA; box-shadow: 0px 0px 15px #F99FB9 inset, 0px 3px 0px #CCC; font-size: 50px; }
+#grid div.b256 { background-color: #FFE5CA; box-shadow: 0px 0px 15px #FFC993 inset, 0px 3px 0px #CCC; font-size: 50px; }
+#grid div.b512 { background-color: #FFA200; box-shadow: 0px 0px 15px #FFCD77 inset, 0px 3px 0px #CCC; color: white; font-size: 50px; }
+#grid div.b1024 { background-color: #FFFA87; box-shadow: 0px 0px 15px #FFF547 inset, 0px 3px 0px #CCC; font-size: 40px;}
+#grid div.b2048 { background-color: #333; box-shadow: 0px 0px 15px #555 inset, 0px 3px 0px #CCC; color: white; font-size: 40px; }
+
+nav { margin: 40px 0px 20px; }
+nav a { font-size: 25px; margin: 0px 5px; }
+
+footer { font-size: 12px; color: #777; }
+footer a { color: #26F; text-decoration: none; }
+footer a:hover { color: #38F; text-decoration: underline; }

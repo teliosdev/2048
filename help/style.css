@@ -1,0 +1,48 @@
+html {
+	font-family: "Open Sans", sans-serif; 
+	color: #444; background-color: #EEE; }
+body { width: 600px; margin: 30px auto 80px; }
+
+h1, h2 { cursor: default; font-family: "Comfortaa"; }
+h1 { font-size: 50px; }
+h2 { font-size: 25px; }
+
+a, li span { background-color: white; border-radius: 3px; box-shadow: 0px 3px 0px #CCC; }
+
+h1, p { text-align: center; }
+
+h1, a {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+ul { list-style-type: none; padding: 0px; margin: 0px; text-align: center; }
+li { 
+	display: inline-block; width: 30%; height: 100px;
+	text-align: center; }
+li span { display: inline-block; }
+.keys span {  width: 40px; height: 30px; margin: 5px; line-height: 30px; }
+.keys span:first-child { margin: 5px 50px; }
+.grid { position: relative; }
+.grid div:first-child { width: 120px; height: 120px; }
+.grid div:first-child span { width: 20px; height: 20px; margin: 5px; float: left; }
+.grid div:last-child { position: absolute; top: 0px; left: 0px; height: 120px; width: 120px; }
+.grid div:last-child span { position: absolute; }
+.grid div:last-child span:nth-child(1) { top: 5px; left: 35px; height: 20px; width: 50px; }
+.grid div:last-child span:nth-child(2) { top: 35px; left: 5px; height: 50px; width: 20px; line-height: 50px; }
+.grid div:last-child span:nth-child(3) { bottom: 5px; left: 35px; height: 20px; width: 50px; }
+.grid div:last-child span:nth-child(4) { top: 35px; right: 5px; height: 50px; width: 20px; line-height: 50px; }
+
+a {
+	display: inline-block; margin: 5px; padding: 4px 10px; font-size: 25px;
+	line-height: 30px; color: #444; text-decoration: none; }
+a:active {
+	position: relative; top: 3px; box-shadow: none; }
+
+p span { display: block; margin: 20px 0px; }
+
+img { margin: 40px auto 0px; }
