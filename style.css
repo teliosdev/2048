@@ -5,7 +5,7 @@ body { width: 500px; margin: 0px auto; }
 
 h1, #score, #grid { font-family: "Comfortaa"; }
 
-header, footer {
+header, #grid, #level, footer {
 	cursor: default;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -58,8 +58,15 @@ header p { margin: 0px; }
 #grid div.b1024 { background-color: #FFFA87; box-shadow: 0px 0px 15px #FFF547 inset, 0px 3px 0px #CCC; font-size: 40px;}
 #grid div.b2048 { background-color: #333; box-shadow: 0px 0px 15px #555 inset, 0px 3px 0px #CCC; color: white; font-size: 40px; }
 
+#level { color: #999; }
+#level > div {
+	position: relative; height: 5px;
+	border-radius: 2.5px; background-color: #DDD; }
+#level div div { 
+	height: 5px; width: 0%; background-color: white; }
+
 nav { margin: 40px 0px 20px; }
-nav a { font-size: 25px; margin: 0px 10px; padding: 2px 8px; }
+nav a { font-size: 20px; margin: 0px 10px; padding: 2px 8px; }
 
 footer { font-size: 12px; color: #777; }
 footer a { color: #26F; text-decoration: none; }

@@ -1,15 +1,26 @@
-var grid, gridElem = document.getElementById("grid"),
-	score = 0, sum = 0, scoreElem = document.getElementById("score");
+var grid, gridElem = document.getElementById("grid");
+
+var score = 0, sum = 0, scoreElem = document.getElementById("score");
+
+var level = 0, levelElem = document.getElementById("level"),
+	levelText = levelElem.getElementsByTagName("p")[0],
+	levelBar = levelElem.getElementsByTagName("div")[0].getElementsByTagName("div")[0];
+
+var shareElem = document.getElementById("share");
 
 function updateGrid() {
+	var e;
+
 	for(var y = 0; y < 4; y++) {
 		for(var x = 0; x < 4; x++) {
+			e = gridElem.getElementsByTagName("div")[(y * 4) + x];
+
 			if(grid[y][x] !== -1) {
-				gridElem.getElementsByTagName("div")[(y * 4) + x].innerHTML = grid[y][x];
-				gridElem.getElementsByTagName("div")[(y * 4) + x].setAttribute("class", "b" + grid[y][x]);
+				e.innerHTML = grid[y][x];
+				e.setAttribute("class", "b" + grid[y][x]);
 			} else {
-				gridElem.getElementsByTagName("div")[(y * 4) + x].innerHTML = "";
-				gridElem.getElementsByTagName("div")[(y * 4) + x].setAttribute("class", "bv");
+				e.innerHTML = "";
+				e.setAttribute("class", "bv");
 			}
 		}
 	}
@@ -165,9 +176,39 @@ function getScore() {
 }
 
 function updateScore() {
-	document.getElementById("share").href = "https://twitter.com/home?status=Got%20a%20score%20of%20" + (score + sum) + "%20on%20%232048%20saming.fr/p/2048"
+	shareElem.href = "https://twitter.com/home?status=Got%20a%20score%20of%20" + (score + sum) + "%20on%20%232048%20saming.fr/p/2048";
 
 	scoreElem.innerHTML = (score + sum) + "pts";
+
+	updateLevel();
+}
+
+function getLevelText(lvl) {
+	if(lvl === 0) { return ""; }
+
+	var text = "";
+	if(lvl === 1) { text = "Welcome newbie"; }
+	else if(lvl === 2) { text = "Now you're playing"; }
+	else if(lvl === 3) { text = "Keep calm and press up"; }
+	else if(lvl === 4) { text = "That's okay for a first time I guess"; }
+	else if(lvl === 5) { text = "That's okay for a second time I guess"; }
+	else if(lvl === 6) { text = "This is getting serious isn't it"; }
+	else if(lvl === 7) { text = "Wow!"; }
+	else if(lvl === 8) { text = "Can I have an autograph?"; }
+
+	return text;
+}
+
+function updateLevel() {
+	level = Math.floor(Math.log(score + sum) / Math.log(4));
+
+	if(level > 10) { level = 10; }
+	if(level < 0) { level = 0; }
+
+	var desc = getLevelText(level);
+
+	levelText.innerHTML = "Level " + level + (desc === "" ? "" : (" — " + desc));
+	levelBar.style.width = (level * 10) + "%";
 }
 
 function keyPress(code) {
@@ -179,6 +220,8 @@ function keyPress(code) {
 		moveGrid(2); // right
 	} else if(code === 40 || code === 75) {
 		moveGrid(4); // down
+	} else if(code === 13) {
+		init(); // reinit
 	}
 }
 

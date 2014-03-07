@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>2048 Multiplayer</title>
+		<meta charset="utf-8" />
+		<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Comfortaa:400,700,300|Open+Sans'>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+			<h1><span>2048</span> <span>Multiplayer</span></h1>
+			<div id="scores">
+				<div>
+					<p id="s1">Score</p>
+					<a>Try again?</a>
+				</div>
+				<div>
+					<p id="s2">Score</p>
+					<a>Try again?</a>
+				</div>
+			</div>
+		</header>
+
+		<div id="grids">
+			<div class="grid" id="g1">
+				<div></div><div></div><div></div><div></div>
+				<div></div><div></div><div></div><div></div>
+				<div></div><div></div><div></div><div></div>
+				<div></div><div></div><div></div><div></div>
+			</div>
+
+			<div class="grid" id="g2">
+				<div></div><div></div><div></div><div></div>
+				<div></div><div></div><div></div><div></div>
+				<div></div><div></div><div></div><div></div>
+				<div></div><div></div><div></div><div></div>
+			</div>
+		</div>
+
+		<div id="best">
+			<p class="best" id="b1">Best Score<br/>0pts</p>
+			<p>Use IJKL for player 1, use arrows for player 2.</p>
+			<p class="best" id="b2">Best Score<br/>0pts</p>
+		</div>
+
+
+		<nav><a href="../">Go back to single-player</a></nav>
+
+		<footer>
+			Coded by <a href="/">Saming</a>, 
+			with an original concept by <a href="https://play.google.com/store/apps/details?id=com.veewo.a1024">Veewo Studio</a>. 
+			Fork me on <a href="https://github.com/saming/2048">Github</a>.
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
+</html>
