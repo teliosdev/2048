@@ -276,35 +276,16 @@ function spawnRand() {
 		grid[y][x] = randomValue;
 	} else {
 		if(!checkMovable())
-			gameOver();
+			// gameOver();
 	}
 }
 
 function checkMovable() {
 	for(y = 0; y < 4; y++) {
 		for(x = 0; x < 4; x++) {
-			if(checkNeighbors(x, y)) {
+			if( (grid[y + 1] !== undefined && grid[y + 1][x] === grid[y][x]) || (grid[y][x + 1] !== undefined && grid[y][x + 1] === grid[y][x]) )
 				return true;
-			}
 		}
-	}
-
-	return false;
-}
-
-function checkNeighbors(x, y) {
-	if(x > 0) {
-		if(grid[y][x] === grid[y][x - 1])
-			return true;
-	} else if(x < 3) {
-		if(grid[y][x] === grid[y][x + 1])
-			return true;
-	} else if(y > 0) {
-		if(grid[y][x] === grid[y - 1][x])
-			return true;
-	} else if(y < 3) {
-		if(grid[y][x] === grid[y + 1][x])
-			return true;
 	}
 
 	return false;
