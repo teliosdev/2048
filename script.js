@@ -1,5 +1,7 @@
 var grid, gridElem = document.getElementById("grid");
 
+var touchElem = document.getElementById("touch");
+
 var score = 0, sum = 0, scoreElem = document.getElementById("score");
 
 var level = 0, levelElem = document.getElementById("level"),
@@ -187,14 +189,16 @@ function getLevelText(lvl) {
 	if(lvl === 0) { return ""; }
 
 	var text = "";
-	if(lvl === 1) { text = "Welcome newbie"; }
-	else if(lvl === 2) { text = "Now you're playing"; }
-	else if(lvl === 3) { text = "Keep calm and press up"; }
-	else if(lvl === 4) { text = "That's okay for a first time I guess"; }
-	else if(lvl === 5) { text = "That's okay for a second time I guess"; }
-	else if(lvl === 6) { text = "This is getting serious isn't it"; }
-	else if(lvl === 7) { text = "Wow!"; }
-	else if(lvl === 8) { text = "Can I have an autograph?"; }
+	if(lvl === 1) { text = "Welcome newbie"; } // 4+
+	else if(lvl === 2) { text = "Now you're playing"; } // 16+
+	else if(lvl === 3) { text = "Keep calm and press up"; } // 64+
+	else if(lvl === 4) { text = "That's okay for a first time I guess"; } // 256+
+	else if(lvl === 5) { text = "That's okay for a second time I guess"; } // 1024+
+	else if(lvl === 6) { text = "This is getting serious isn't it"; } // 4,096+
+	else if(lvl === 7) { text = "Wow!"; } // 16,384+
+	else if(lvl === 8) { text = "Can I have an autograph?"; } // 65,536+
+	else if(lvl === 9) { text = "You're not supposed to see this, stop"; } // 262,144+
+	else if(lvl === 10) { text = "I'm pretty sure it's illegal to use supercomputers for that"; } // 1,048,576+
 
 	return text;
 }
@@ -249,13 +253,9 @@ document.onkeydown = function(e) { keyPress(e.keyCode); }
 
 document.getElementsByTagName("header")[0].getElementsByTagName("a")[0].onclick = init;
 
-gridElem.getElementsByTagName("div")[1].onclick = function() { moveGrid(1); }
-gridElem.getElementsByTagName("div")[2].onclick = function() { moveGrid(1); }
-gridElem.getElementsByTagName("div")[4].onclick = function() { moveGrid(3); }
-gridElem.getElementsByTagName("div")[8].onclick = function() { moveGrid(3); }
-gridElem.getElementsByTagName("div")[7].onclick = function() { moveGrid(2); }
-gridElem.getElementsByTagName("div")[11].onclick = function() { moveGrid(2); }
-gridElem.getElementsByTagName("div")[13].onclick = function() { moveGrid(4); }
-gridElem.getElementsByTagName("div")[14].onclick = function() { moveGrid(4); }
+touchElem.getElementsByTagName("div")[0].onclick = function() { moveGrid(1); }
+touchElem.getElementsByTagName("div")[1].onclick = function() { moveGrid(3); }
+touchElem.getElementsByTagName("div")[2].onclick = function() { moveGrid(2); }
+touchElem.getElementsByTagName("div")[3].onclick = function() { moveGrid(4); }
 
 initGrid();

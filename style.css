@@ -34,9 +34,12 @@ header div {
 header p { margin: 0px; }
 #score { font-size: 40px; line-height: 70px; height: 65px; }
 
-#grid { 
+#game { position: relative; width: 500px; height: 500px; margin: 10px 0px; }
+#game > div { position: absolute; top: 0px; left: 0px;  }
+
+#grid {
 	width: 480px; height: 480px; 
-	padding: 10px; margin: 10px 0px;
+	padding: 10px;
 	background-color: #DDD;	border-radius: 8px;
 	box-shadow: 0px 3px 0px #BBB inset; }
 #grid div { 
@@ -57,6 +60,13 @@ header p { margin: 0px; }
 #grid div.b512 { background-color: #FFA200; box-shadow: 0px 0px 15px #FFCD77 inset, 0px 3px 0px #CCC; color: white; font-size: 50px; }
 #grid div.b1024 { background-color: #FFFA87; box-shadow: 0px 0px 15px #FFF547 inset, 0px 3px 0px #CCC; font-size: 40px;}
 #grid div.b2048 { background-color: #333; box-shadow: 0px 0px 15px #555 inset, 0px 3px 0px #CCC; color: white; font-size: 40px; }
+
+#touch { width: 500px; height: 500px; }
+#touch div { position: absolute; }
+#touch div:nth-child(1) { top: 15px; left: 135px; width: 230px; height: 110px; }
+#touch div:nth-child(2) { top: 135px; left: 15px; width: 110px; height: 230px; }
+#touch div:nth-child(3) { bottom: 135px; right: 15px; width: 110px; height: 230px; }
+#touch div:nth-child(4) { bottom: 15px; right: 135px; width: 230px; height: 110px; }
 
 #level { color: #999; }
 #level > div {
