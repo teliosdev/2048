@@ -275,8 +275,9 @@ function spawnRand() {
 
 		grid[y][x] = randomValue;
 	} else {
-		if(!checkMovable())
+		if(!checkMovable()) {
 			// gameOver();
+		}
 	}
 }
 
