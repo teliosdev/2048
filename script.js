@@ -143,6 +143,10 @@ function calcScore(n) {
 		return 16000;
 	else if(n === 16384)
 		return 32500;
+        else if(n === 32768)
+                return 65000;
+        else if(n === 65536)
+                return 131000;
 	else
 		return 0;
 }
